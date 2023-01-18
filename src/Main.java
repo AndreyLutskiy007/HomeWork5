@@ -82,69 +82,49 @@ public class Main {
         }
         // Задача №3
         System.out.println("Задача №3");
-        int year = 1300;
-        int vis = year % 4;
-        int vis1 = year % 100;
-        int vis2 = year % 400;
-        if (vis == 0 && vis2 == 0) {
-            System.out.println("Год високосный");
-            if (vis1 == 100) {
-                System.out.println("Год не високосный");
-            }
+        int year = 600;
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("Год является высокосным");
         } else {
-            System.out.println("Год не високосный");
+            System.out.println("Год не является высокосным");
         }
+
         //Задача №4
         System.out.println("Задача №4");
-        int deliveryDistance = 101;
-        if (deliveryDistance <= 20) {
-            System.out.println("Доставка займет 1 сутки");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            System.out.println("Доставка займет 2 суток");
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            System.out.println("Доставка займет 3 суток");
-        } else if (deliveryDistance > 100) {
-            System.out.println("Доставки нет");
+        int deliveryDistance = 3;
+        int deliveryDay = 1;
+        if (deliveryDistance > 20) {
+            deliveryDay++;
         }
+        if (deliveryDistance > 60) {
+            deliveryDay++;
+        }
+        System.out.println("Доставка займет: " + deliveryDay);
+
+
         // Задача № 5
         System.out.println("Задача № 5");
-        int monthNumber = 11;
+        int monthNumber = 5;
         switch (monthNumber) {
+            case 12:
             case 1:
-                System.out.println("Январь, месяц зимний");
-                break;
             case 2:
-                System.out.println("Февраль, месяц зимний");
+                System.out.println("Зимний месяц");
                 break;
             case 3:
-                System.out.println("Март, месяц весенний");
-                break;
             case 4:
-                System.out.println("Апрель, месяц весенний");
-                break;
             case 5:
-                System.out.println("Май, месяц весенний");
+                System.out.println("Весенний месяц");
                 break;
             case 6:
-                System.out.println("Июнь, месяц летний");
-                break;
             case 7:
-                System.out.println("Июль,месяц летний");
-                break;
             case 8:
-                System.out.println("Август, месяц летний");
+                System.out.println("Летний месяц");
                 break;
             case 9:
-                System.out.println("Сентябрь, месяц осенний");
-                break;
             case 10:
-                System.out.println("Октябрь, месяц осенний");
-                break;
             case 11:
-                System.out.println("Ноябрь, месяц осенний");
-                break;
-            case 12:
-                System.out.println("Декабрь, месяц зимний");
+                System.out.println("Осенний месяц");
                 break;
             default:
                 System.out.println("Значение месяца больше 13,ошибочное значение");
